@@ -1,0 +1,72 @@
+.all-average-scores {
+    margin-bottom: 20px;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 400px;
+}
+
+.all-average-scores h3 {
+    text-align: center;
+}
+
+.restaurant-details {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.restaurant-details ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: small;
+  }
+
+li {
+    display: inline;
+    margin-right: 5px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.restaurant-scoring {
+    width: 180px;
+    display: inline-block;
+}
+
+.category-name {
+    display: inline-block;
+    width: 150px;
+}
+
+.category-score {
+    display: inline-block;
+    width: 30px;
+}
+
+.total {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 10px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.total-label {
+    order: 1;
+}
+
+.total-score {
+    order: 2;
+    font-size: 1.5em;
+    font-weight: bold;
+}

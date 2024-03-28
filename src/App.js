@@ -7,7 +7,11 @@ import "./App.css";
 export const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
 
-  return <button onClick={() => loginWithRedirect()}>Log In</button>;
+  return (
+    <button className="button login-button" onClick={() => loginWithRedirect()}>
+      Log In or Sign Up
+    </button>
+  );
 };
 
 export const LogoutButton = () => {
@@ -15,6 +19,7 @@ export const LogoutButton = () => {
 
   return (
     <button
+      className="button logout-button"
       onClick={() =>
         logout({ logoutParams: { returnTo: window.location.origin } })
       }
@@ -25,6 +30,8 @@ export const LogoutButton = () => {
 };
 
 function App() {
+  const { isAuthenticated } = useAuth0();
+  console.log("isAuthenticated", isAuthenticated);
   return (
     <>
       <header className="navbar">
@@ -36,17 +43,23 @@ function App() {
             <li>
               <a href="#">About</a>
             </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-
-            <li>
-              <LogoutButton />
-            </li>
-
-            <li>
-              <LoginButton />
-            </li>
+            {isAuthenticated ? (
+              <>
+                <li>
+                  <a href="#">Add Restaurant</a>
+                </li>
+                <li>
+                  <a href="#">Your Scores</a>
+                </li>
+                <li>
+                  <LogoutButton />
+                </li>
+              </>
+            ) : (
+              <li>
+                <LoginButton />
+              </li>
+            )}
           </ul>
         </nav>
       </header>
