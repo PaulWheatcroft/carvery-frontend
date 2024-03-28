@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import AuthAccount from "./components/Auth/AuthAccount";
+import { AllAverageScores } from "./components/Scores/AllAverageScores";
 import "./App.css";
 
 export const LoginButton = () => {
@@ -52,7 +53,7 @@ function App() {
       <main className="main">
         <div className="content">
           <AuthAccount />
-          <p>A load of fake words to fill up space</p>
+          <AllAverageScores />
         </div>
       </main>
       <footer className="footer">
