@@ -5,7 +5,9 @@ import "./AllAverageScores.css";
 const RestaurantScores = ({ restaurant }) => {
   return (
     <div className="all-average-scores" key={restaurant.restaurant_details.id}>
-      <h3>{restaurant.restaurant_details.name}</h3>
+      <h3 className="permanent-marker-regular">
+        {restaurant.restaurant_details.name}
+      </h3>
       <div className="restaurant-details">
         <ul>
           {restaurant.restaurant_details.address1 && (
@@ -87,7 +89,7 @@ const RestaurantScores = ({ restaurant }) => {
         </div>
         <div className="total">
           <div className="total-label">Total:</div>
-          <div className="total-score">
+          <div className="total-score permanent-marker-regular">
             {Math.round(restaurant.total_average)}
           </div>
         </div>
@@ -121,7 +123,7 @@ export const AllAverageScores = () => {
   if (allRestaurantsAverageScoreListData) {
     return (
       <div className="AllAverageScores">
-        <h2>All Average Scores</h2>
+        <h2 className="permanent-marker-regular">All Average Scores</h2>
         <h3>{results} restaurants</h3>
         <div className="list-container">
           {averages.map((restaurant) => (

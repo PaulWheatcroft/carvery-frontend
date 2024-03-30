@@ -66,16 +66,13 @@ const AuthAccount = () => {
   }
 
   return (
-    <div>
+    <>
       {userData && (
-        <ul>
-          <li>ID: {userData.user?.id}</li>
-          <li>Name: {userData.user?.name}</li>
-          <li>Email: {userData.user?.email}</li>
-          <li>Created date: {userData.user?.created}</li>
-        </ul>
+        <a href="#" id={`user-id-${userData.user?.id}`}>
+          {userData.user?.name}
+        </a>
       )}
-    </div>
+    </>
   );
 };
 

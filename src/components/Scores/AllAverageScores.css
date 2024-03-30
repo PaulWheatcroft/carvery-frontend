@@ -1,9 +1,16 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .all-average-scores {
     margin-bottom: 20px;
     padding: 10px 10px 20px 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    max-width: 400px;
+    border-radius: 10px;
+
+    box-shadow: 2px 2px 5px #e4e4e4;
 }
 
 .all-average-scores h3 {
@@ -53,12 +60,14 @@ li {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
     margin-top: 10px;
-    background-color: aquamarine;
+    background-color: rgb(127, 255, 212);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-shadow: 0px 0px 10px #ffd1dc;
 }
 
 .total-label {
@@ -68,5 +77,4 @@ li {
 .total-score {
     order: 2;
     font-size: 1.5em;
-    font-weight: bold;
 }

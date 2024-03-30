@@ -35,14 +35,11 @@ function App() {
   return (
     <>
       <header className="navbar">
+        <div className="permanent-marker-regular logo">
+          <a href="#">Wot A Carve Up!</a>
+        </div>
         <nav>
           <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
             {isAuthenticated ? (
               <>
                 <li>
@@ -50,6 +47,9 @@ function App() {
                 </li>
                 <li>
                   <a href="#">Your Scores</a>
+                </li>
+                <li>
+                  <AuthAccount />
                 </li>
                 <li>
                   <LogoutButton />
@@ -65,7 +65,6 @@ function App() {
       </header>
       <main className="main">
         <div className="content">
-          <AuthAccount />
           <AllAverageScores />
         </div>
       </main>
