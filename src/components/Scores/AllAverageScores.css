@@ -4,6 +4,7 @@
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #e4e4e4;
+    width: 500px;
 }
 
 .all-average-scores h3 {
@@ -72,3 +73,15 @@ li {
     order: 2;
     font-size: 1.5em;
 }
+
+  /* Optional: Add some responsive styles for smaller screens */
+  @media (max-width: 400px) {
+    .all-average-scores {
+        margin-bottom: 20px;
+        padding: 10px 10px 20px 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px #e4e4e4;
+        width: 100%;
+    }
+  }
