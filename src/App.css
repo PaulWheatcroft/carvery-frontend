@@ -24,7 +24,6 @@ body {
   color: rgb(247, 121, 121);
   text-shadow: 2px 2px 0px #8f4545;
   margin: 0;
-  max-width: fit-content;
   min-width: fit-content;
 }
 
@@ -38,18 +37,16 @@ nav {
   order: 1;
   list-style: none;
   padding: 0;
-  max-width: fit-content;
 }
 
 nav ul {
-  margin: 10px 0 0 0;
+  display: flex;
+  list-style-type: none;
   padding: 0;
-  height: 50px;
 }
 
 nav li {
-  display: inline;
-  margin: 0 10px;
+  margin-left: 15px;
 }
 
 nav a {
@@ -70,16 +67,11 @@ nav a {
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
-  margin: 4px 2px;
   cursor: pointer;
 }
 
 .button:hover {
   box-shadow: 0 0px 10px #ffd1dc, 0 0px 10px #ffd1dc;
-}
-
-.logout-button {
-  background-color: lightgrey;
 }
 
 .login-button {
@@ -95,10 +87,12 @@ nav a {
 }
 
 .content {
-  max-width: 1100px;
   margin: 0 auto; /* Centers the content horizontally */
   padding: 20px;
-  flex: 1; /* Allows the content to expand to fill the remaining vertical space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {

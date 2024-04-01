@@ -1,15 +1,8 @@
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .all-average-scores {
     margin-bottom: 20px;
     padding: 10px 10px 20px 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
-
     box-shadow: 2px 2px 5px #e4e4e4;
 }
 
@@ -42,18 +35,18 @@ li {
   }
 
 .restaurant-scoring {
-    width: 180px;
+    width: 220px;
     display: inline-block;
 }
 
 .category-name {
     display: inline-block;
-    width: 150px;
+    width: 150x;
 }
 
 .category-score {
     display: inline-block;
-    width: 30px;
+    width: 50px;
 }
 
 .total {
@@ -62,6 +55,7 @@ li {
     border-radius: 50%;
     border: 2px solid rgb(255, 255, 255);
     margin-top: 10px;
+    margin-left: 20px;
     background-color: rgb(127, 255, 212);
     display: flex;
     justify-content: center;

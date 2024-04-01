@@ -122,7 +122,7 @@ export const AllAverageScores = () => {
 
   if (allRestaurantsAverageScoreListData) {
     return (
-      <div className="AllAverageScores">
+      <>
         <h2 className="permanent-marker-regular">All Average Scores</h2>
         <h3>{results} restaurants</h3>
         <div className="list-container">
@@ -130,7 +130,7 @@ export const AllAverageScores = () => {
             <RestaurantScores restaurant={restaurant} />
           ))}
         </div>
-      </div>
+      </>
     );
   } else {
     return null;
