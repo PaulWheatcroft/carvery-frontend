@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom";
 import { getRestaurantAverageScoreList } from "../../services/restaurantService";
 import "./AllAverageScores.css";
 
 const RestaurantScores = ({ restaurant }) => {
+  const { isAuthenticated } = useAuth0();
   return (
     <div className="all-average-scores" key={restaurant.restaurant_details.id}>
       <h3 className="permanent-marker-regular">
@@ -94,6 +97,13 @@ const RestaurantScores = ({ restaurant }) => {
           </div>
         </div>
       </div>
+      {isAuthenticated && ( // Render the button only if the user is authenticated
+        <div className="add-score-button">
+          <Link to={`/add-score/${restaurant.restaurant_details.id}`}>
+            Add Score
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

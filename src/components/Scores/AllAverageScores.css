@@ -85,3 +85,22 @@ li {
         width: 100%;
     }
   }
+
+  .add-score-button {
+    margin-top: 20px; /* Add some top margin to separate it from the content above */
+  }
+  
+  .add-score-button a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .add-score-button a:hover {
+    background-color: #45a049;
+  }

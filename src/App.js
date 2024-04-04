@@ -44,12 +44,16 @@ function App() {
           <ul>
             {isAuthenticated ? (
               <>
-                <li>
-                  <Link to="/add-restaurant">Add Restaurant</Link>
-                  {/* <a href="#">Add Restaurant</a> */}
-                </li>
-                <li>
-                  <a href="#">Your Scores</a>
+                <li class="dropdown">
+                  <a href="#">Add</a>
+                  <div class="dropdown-content">
+                    <Link to="/add-restaurant" className="dropdown-link">
+                      Restaurant
+                    </Link>
+                    <a href="#" className="dropdown-link">
+                      Scores
+                    </a>
+                  </div>
                 </li>
                 <li>
                   <AuthAccount />
