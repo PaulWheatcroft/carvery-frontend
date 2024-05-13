@@ -5,6 +5,7 @@ import AuthAccount from "./components/Auth/AuthAccount";
 import { AllAverageScores } from "./components/Scores/AllAverageScores";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AddRestaurant from "./components/Restaurants/AddRestaurant"; // Import the AddRestaurant component
+import { AddRestaurantScore } from "./components/Scores/AddRestaurantScore";
 import "./App.css";
 
 export const LoginButton = () => {
@@ -75,6 +76,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<AllAverageScores />} />
             <Route path="/add-restaurant" element={<AddRestaurant />} />
+            <Route path="/add-score/:id" element={<AddRestaurantScore />} />
           </Routes>
         </div>
       </main>
